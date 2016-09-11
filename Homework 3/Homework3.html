@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Homework 3</title>
+    <style>
+        
+        table, th, td
+        {
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 16pt;
+            padding: 5px;
+        }
+        
+        #students
+        {
+            background-color: black;
+            color: white;
+        }
+        
+        #labels
+        {
+            background-color: #ccffcc;
+        }
+        
+        .credits
+        {
+            text-align: center;
+        }
+        
+        .even
+        {
+            background-color: #ccccff
+        }
+        
+        .credits.maxcredits
+        {
+            background-color: #ffcccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        
+        <th id = "students" colspan="4">Students</th>
+            
+        <tr id ="labels"><!-- Column labels-->
+            <th>Name</th>
+            <th>Course Title</th>
+            <th>Course #</th>
+            <th>Credits</th>
+        </tr>
+        
+        <!--Row 1-->
+            <tr>
+                <td rowspan="3">Andrews, Samantha</td>
+                <td> Calculus I</td>
+                <td> Math 1500</td>
+                <td class = "credits"> 3</td>
+            </tr>
+            
+            <tr>
+                <td> German Lit I</td>
+                <td> Ger 3500</td>
+                <td class = "credits"> 3</td>
+            </tr>
+                
+            <tr>
+                <td> Genomics II</td>
+                <td> Bio 3100</td>
+                <td class = "credits maxcredits"> 6</td>
+            </tr>                 
+            
+        <!--Row 2-->
+            <tr class = "even">
+                <td rowspan="4">Burns, Tony</td>
+                <td> Intro to Rhyming</td>
+                <td> Eng 1700</td>
+                <td class = "credits">2</td>
+            </tr>
+            
+            <tr class = "even">
+                <td> Dead Poets II</td>
+                <td> Eng 2100</td>
+                <td class = "credits">2</td>
+            </tr>
+                
+            <tr class = "even">
+                <td> Creative Writing</td>
+                <td> Eng 2700</td>
+                <td class = "credits">3</td>
+            </tr>
+            
+            <tr class = "even">
+                <td> Philosophy of Kant</td>
+                <td> Phil 3800</td>
+                <td class = "credits maxcredits">5</td>
+            </tr> 
+           
+        <!--Row 3-->
+            <tr>
+                <td rowspan="3">Collins, Beth</td>
+                <td> Circuit Analysis II</td>
+                <td> EE 2100</td>
+                <td class = "credits">3</td>
+            </tr>
+            
+            <tr>
+                <td> Electromagnetics I</td>
+                <td> Phys 2300</td>
+                <td class = "credits maxcredits"> 5</td>
+            </tr>
+                
+            <tr>
+                <td> Differential Equations</td>
+                <td> Math 2900</td>
+                <td class = "credits"> 3</td>
+            </tr>
+    
+        <!--Row 4-->
+            <tr class = "even">
+                <td rowspan="4">Eagans, Kerri</td>
+                <td> Digital Video I</td>
+                <td> CS 1600</td>
+                <td class = "credits">3</td>
+            </tr>
+            
+            <tr class = "even">
+                <td> Web Application Dev 11</td>
+                <td> CS 2300</td>
+                <td class = "credits">3</td>
+            </tr>
+                
+    </table>
+</body>
+</html>

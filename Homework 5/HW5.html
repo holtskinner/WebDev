@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Homework 5: Text Editor
+    </title>
+    <style>
+    
+        #Outerwrapper
+        {
+            display:flex;
+        }
+        #InnerWrapper
+        {
+            display:flex;
+            flex-direction: column;
+        }
+        textarea
+        {
+            width: 500px;
+            height: 250px;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            color: rebeccapurple;
+            font-size: 18px;
+            font-family: sans-serif;
+            margin: 10px;
+        }
+        #output
+        {
+            width: 500px;
+            height: 520px;
+            margin 10px;
+        }
+        
+        button
+        {
+            color: purple;
+            background-color: plum;
+            margin: auto;
+            border-radius: 10px;
+            font-size: 30px;
+        }
+        
+        div#output
+        {
+            border: 2px solid purple;
+            border-radius: 10px;
+        }
+    </style>
+    
+    
+    <script>
+    
+ function runcode()
+            {
+                var content = document.getElementById('htmlinput').value;
+                var iframe = document.getElementById('output');
+                iframe.srcdoc=content;
+                return false;
+            }
+            runcode();
+            function reset()
+            {
+            	var htmlcontent=document.getElementById('htmlinput');
+            	htmlcontent.value=null;
+            	var csscontent=document.getElementById('cssinput');
+            	csscontent.value = null;
+            	return false;
+            }
+            reset();
+            function runcss()
+            {
+              var csscontent = document.getElementById('cssinput').value;
+              var htmlcontent = document.getElementById('htmlinput').value;
+              var iframe = document.getElementById('output');
+              if (toggle.checked == false) {
+                     iframe.srcdoc=htmlcontent;
+					 toggle.checked = true;
+              }
+              else {
+                     iframe.srcdoc=("<style>" + csscontent + "</style>" + htmlcontent);
+                     toggle.checked = false;
+              }
+            	return false;
+            }
+            runcss();
+
+    </script>
+</head>
+<body>
+
+    <form action="#" method="post">
+   
+<div id="Outerwrapper">
+    
+    <div id ="InnerWrapper">
+        <textarea id = "CSS" name="cssinput" placeholder="CSS is Amazing!!!"></textarea>
+
+        <textarea id = "HTML" name="htmlinput" placeholder="HTML is Awesome!!!!!"></textarea>
+    </div>    
+    
+    <div id = "output">
+    
+    </div>
+    
+ </div>    
+    <hr>
+    
+    <button id ="submit" onclick = "runcode()">
+    Launch!    
+    </button>
+        
+    <button id ="toggle" checked="false" onclick = "runcss()">
+    Toggle!    
+    </button>
+        
+    <button id = "clear" type ="reset" onclick = "reset()">
+    Clear!
+    </button>
+    
+    </form>
+</body>
+</html>

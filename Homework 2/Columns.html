@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Assignment 2: Columns!
+    </title>
+    <style>
+
+    .column
+    {
+      margin: 5px;
+      padding: 10px;
+    }
+
+    #left
+    {
+        background-color: coral;
+        width: 200px;
+        float: left;
+    }
+
+    #middle
+    {
+      background-color: beige;
+      width: 400px;
+      float: left;
+    }
+
+    #right
+    {
+      background-color: lightblue;
+      width:  210px;
+      /*
+      width = 900px
+              -210px(left physical)
+              -410px(middle physical)
+              -10px(right margins)
+              -60px(all columns padding)
+              = 210px
+      */
+      float: left;
+    }
+
+    #wrapper
+    {
+        width: 900px;
+        border: 2px solid lightgrey;
+        margin: 0 10px;
+        margin-right: auto;
+    }
+
+    .column
+    {
+      margin: 5px;
+      padding: 10px;
+    }
+
+    .group:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div id = "wrapper" class = "group">
+
+      <div id = "left" class = "column">
+        Etiam in est eros. Curabitur id pellentesque elit. Pellentesque in accumsan ligula.
+        In ut imperdiet lorem. Sed ut massa condimentum, rhoncus mi vitae, pellentesque nisl.
+        Mauris tempus congue lorem, sed laoreet purus aliquam quis. Aliquam faucibus mi est, eu dictum nisl aliquet at.
+      </div> <!-- End left-->
+
+      <div id = "middle" class = "column">
+        Etiam in est eros. Curabitur id pellentesque elit. Pellentesque in accumsan ligula.
+        In ut imperdiet lorem. Sed ut massa condimentum, rhoncus mi vitae, pellentesque nisl.
+        Mauris tempus congue lorem, sed laoreet purus aliquam quis. Aliquam faucibus mi est, eu dictum nisl aliquet at.
+      </div> <!-- End middle-->
+
+      <div id = "right" class = "column">
+        Etiam in est eros. Curabitur id pellentesque elit. Pellentesque in accumsan ligula.
+        In ut imperdiet lorem. Sed ut massa condimentum, rhoncus mi vitae, pellentesque nisl.
+        Mauris tempus congue lorem, sed laoreet purus aliquam quis. Aliquam faucibus mi est, eu dictum nisl aliquet at.
+      </div> <!-- End right-->
+
+    </div><!-- End wrapper-->
+</body>
+</html>

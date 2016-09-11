@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TRY IT YO'SELF!</title>
+	<style>
+		
+		* 
+		{
+			font-family: "Comic Sans MS", cursive, sans-serif;
+		}
+		
+	 	textarea, iframe 
+		{
+    		 border: 2px solid #FF079C;
+    		 height: 200px;  
+			 width: 45%; 
+			 margin: 10px;
+			 padding: 10px;
+ 		}
+		
+ 		.textedit{
+			float:left;
+			border: 2px solid #FF079C;
+ 		}
+		
+		.headertext{
+			width: 45%;
+			float:left;
+			padding-left: 50px;
+		}
+		
+		.centertext{
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		iframe
+		{
+			margin: 10px auto;
+			display: block;
+		}
+		
+		.buttonclass
+		{
+			text-align: center;
+			padding-left: 4px;
+			padding-right: 69px;
+		}
+
+ 		.group:before,
+		.group:after {
+		content:"";
+		display:table;
+		}
+		.group:after {
+		clear:both;
+		}
+		.group {
+		zoom:1; /* For IE 6/7 (trigger hasLayout) */
+		}
+ 	</style>
+    <div class="buttonclass">
+	<button onclick="runcode()">LAUNCH</button>
+    <button onclick="runcss()" checked="false" id="toggle">TOGGLE</button>
+    <button onclick="reset()">RESET</button>
+	</div>
+</head>
+<body>
+	<br>
+	<form action="#" method="GET">
+	<div class="group">
+	<form>
+		<br>
+		<div class="headertext"><strong>Enter the CSS text here:</strong></div>
+		<div class="headertext"><strong>Enter the HTML text here:</strong></div>
+		<br>
+		<textarea name="cssinput" id="cssinput" class="textedit">
+</textarea>
+     </form>
+	<form>
+
+		<textarea name="htmlinput" id="htmlinput" class="textedit"> 
+</textarea>
+     </form>
+	</div>
+	</form>
+	<div>
+		<div class="centertext"><strong></br>The output of the entered text is...</br> 
+		<img src="http://i.imgur.com/U71Ms.gif"></img></br>
+		Scroll down for the moment of truth...</br></strong></div>
+		<iframe name="output" id="output"></iframe>
+	</div>
+	
+	
+	<script>
+            function runcode()
+            {
+                var content = document.getElementById('htmlinput').value;
+                var iframe = document.getElementById('output');
+                iframe.srcdoc=content;
+                return false;
+            }
+            runcode();
+            function reset()
+            {
+            	var htmlcontent=document.getElementById('htmlinput');
+            	htmlcontent.value=null;
+            	var csscontent=document.getElementById('cssinput');
+            	csscontent.value = null;
+            	return false;
+            }
+            reset();
+            function runcss()
+            {
+              var csscontent = document.getElementById('cssinput').value;
+              var htmlcontent = document.getElementById('htmlinput').value;
+              var iframe = document.getElementById('output');
+              if (toggle.checked == false) {
+                     iframe.srcdoc=htmlcontent;
+					 toggle.checked = true;
+              }
+              else {
+                     iframe.srcdoc=("<style>" + csscontent + "</style>" + htmlcontent);
+                     toggle.checked = false;
+              }
+            	return false;
+            }
+            runcss();
+	  </script>
+</body>
+</html>
